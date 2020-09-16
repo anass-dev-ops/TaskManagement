@@ -11,14 +11,11 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Task implements Serializable{
+public class Project implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String description;
 	private LocalDateTime startDate;
-	private LocalDateTime releaseDate;
 }

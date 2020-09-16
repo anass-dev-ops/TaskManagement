@@ -1,7 +1,6 @@
 package org.taskManagement.entities;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,14 +10,11 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Task implements Serializable{
+public class AppUser implements Serializable{
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String name;
-	private String description;
-	private LocalDateTime startDate;
-	private LocalDateTime releaseDate;
+	private String username;
+	private boolean active;
 }
