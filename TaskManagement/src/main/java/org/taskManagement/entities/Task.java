@@ -23,7 +23,10 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Task implements Serializable {
+public class Task implements Serializable{
+	
+	private static final long serialVersionUID = 94758947589347598L;
+	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
