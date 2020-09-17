@@ -2,11 +2,13 @@ package org.taskManagement.entities;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,4 +20,7 @@ public class Project implements Serializable{
 	private Long id;
 	private String name;
 	private LocalDateTime startDate;
+	
+	@OneToMany(mappedBy = "project")
+	private Collection<Sector> sectors;
 }
