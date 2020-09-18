@@ -6,15 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.taskManagement.entities.Task;
 
 @SpringBootApplication
-public class TaskManagementApplication implements CommandLineRunner{
+public class TaskManagementApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(TaskManagementApplication.class, args);
-	}
-
-	@Override
-	public void run(String... args) throws Exception {
-		Task task = new Task();
 	}
 
 }

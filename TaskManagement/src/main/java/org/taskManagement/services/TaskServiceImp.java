@@ -4,12 +4,16 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.taskManagement.dao.AppRoleRepository;
+import org.taskManagement.dao.AppUserRepository;
 import org.taskManagement.dao.PoleRepository;
 import org.taskManagement.dao.ProjectRepository;
 import org.taskManagement.dao.SectorRepository;
 import org.taskManagement.dao.StateRepository;
 import org.taskManagement.dao.TaskRepository;
 import org.taskManagement.dao.TypeStudyRepository;
+import org.taskManagement.entities.AppRole;
+import org.taskManagement.entities.AppUser;
 import org.taskManagement.entities.Pole;
 import org.taskManagement.entities.Project;
 import org.taskManagement.entities.Sector;
@@ -31,6 +35,10 @@ public class TaskServiceImp implements ITasksService{
 	private SectorRepository sectorRepository;
 	@Autowired
 	private TaskRepository taskRepository;
+	@Autowired
+	private AppUserRepository appUserRepository;
+	@Autowired
+	private AppRoleRepository appRoleRepository;
 	@Override
 	public void saveState(State state) {
 		stateRepository.save(state);
@@ -74,6 +82,26 @@ public class TaskServiceImp implements ITasksService{
 	@Override
 	public List<Task> findTasksByName(String name) {
 		return taskRepository.findByName(name);
+	}
+
+	@Override
+	public Project findProjectByName(String name) {
+		return projectRepository.findByName(name);
+	}
+
+	@Override
+	public void saveAppRole(AppRole appRole) {
+		appRoleRepository.save(appRole);
+	}
+
+	@Override
+	public void saveAppUser(AppUser appUser) {
+		appUserRepository.save(appUser);
+	}
+
+	@Override
+	public AppRole findRoleByName(String appRoleName) {
+		return appRoleRepository.findByName(appRoleName);
 	}
 
 }

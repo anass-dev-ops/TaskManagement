@@ -6,5 +6,5 @@ import org.taskManagement.entities.AppRole;
 
 @Repository
 public interface AppRoleRepository extends JpaRepository<AppRole, Long>{
-
+	public AppRole findByName(String appRoleName);
 }
