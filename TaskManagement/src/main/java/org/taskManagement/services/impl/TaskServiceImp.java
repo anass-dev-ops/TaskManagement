@@ -1,4 +1,4 @@
-package org.taskManagement.services;
+package org.taskManagement.services.impl;
 
 import java.util.List;
 
@@ -20,6 +20,7 @@ import org.taskManagement.entities.Sector;
 import org.taskManagement.entities.State;
 import org.taskManagement.entities.Task;
 import org.taskManagement.entities.TypeStudy;
+import org.taskManagement.services.ITasksService;
 
 @Service
 public class TaskServiceImp implements ITasksService{

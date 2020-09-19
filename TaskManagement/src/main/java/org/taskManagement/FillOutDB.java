@@ -46,6 +46,7 @@ public class FillOutDB implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
+		/*
 		Stream.of("Project RIP 567", "Project PIO 900").forEach(projectName -> {
 			Project project = new Project();
 			project.setName(projectName);
@@ -95,6 +96,7 @@ public class FillOutDB implements CommandLineRunner{
 		AppUser appUser = new AppUser();
 		appUser.setUsername("Superviseur");
 		appUser.setAppRoles(appRoles);
+		// appUser.setActive(true);
 		iAppUserService.saveAppUser(appUser);
 		
 		appRoles.clear();
@@ -114,7 +116,7 @@ public class FillOutDB implements CommandLineRunner{
 			task.setReleaseDate(LocalDateTime.of(2020, 9, 21, 12, 0));
 			iTasksService.saveTask(task);
 		});
-		
+		*/
 	}
 
 }

@@ -1,9 +1,11 @@
-package org.taskManagement.services;
+package org.taskManagement.services.impl;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.taskManagement.dao.AppRoleRepository;
 import org.taskManagement.entities.AppRole;
+import org.taskManagement.services.IAppRoleService;
 
 @Service
 public class AppRoleServiceImp implements IAppRoleService {
@@ -21,4 +23,5 @@ public class AppRoleServiceImp implements IAppRoleService {
 	public AppRole findRoleByName(String appRoleName) {
 		return appRoleRepository.findByName(appRoleName);
 	}
+
 }
