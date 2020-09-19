@@ -12,16 +12,6 @@ import org.taskManagement.entities.Task;
 import org.taskManagement.entities.TypeStudy;
 
 public interface ITasksService {
-	public void saveState(State state);
-	public void saveTypeStudy(TypeStudy typeStudy);
-	public void savePole(Pole pole);
-	public void saveProject(Project project);
-	public Project findProjectByName(String name);
-	public void saveSector(Sector sector);
-	public void saveAppRole(AppRole appRole);
-	public AppRole findRoleByName(String appRoleName);
-	public void saveAppUser(AppUser appUser);
-	
 	public void saveTask(Task task);
 	public List<Task> findAll();
 	public List<Task> findTasksByState(State state);

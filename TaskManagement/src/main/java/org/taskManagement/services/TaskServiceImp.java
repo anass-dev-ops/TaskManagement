@@ -23,46 +23,10 @@ import org.taskManagement.entities.TypeStudy;
 
 @Service
 public class TaskServiceImp implements ITasksService{
-	@Autowired
-	private StateRepository stateRepository;
-	@Autowired
-	private TypeStudyRepository typeStudyRepository;
-	@Autowired
-	private PoleRepository poleRepository;
-	@Autowired
-	private ProjectRepository projectRepository;
-	@Autowired
-	private SectorRepository sectorRepository;
+	
 	@Autowired
 	private TaskRepository taskRepository;
-	@Autowired
-	private AppUserRepository appUserRepository;
-	@Autowired
-	private AppRoleRepository appRoleRepository;
-	@Override
-	public void saveState(State state) {
-		stateRepository.save(state);
-	}
 
-	@Override
-	public void saveTypeStudy(TypeStudy typeStudy) {
-		typeStudyRepository.save(typeStudy);
-	}
-
-	@Override
-	public void savePole(Pole pole) {
-		poleRepository.save(pole);
-	}
-
-	@Override
-	public void saveProject(Project project) {
-		projectRepository.save(project);
-	}
-
-	@Override
-	public void saveSector(Sector sector) {
-		sectorRepository.save(sector);
-	}
 
 	@Override
 	public void saveTask(Task task) {
@@ -84,24 +48,6 @@ public class TaskServiceImp implements ITasksService{
 		return taskRepository.findByName(name);
 	}
 
-	@Override
-	public Project findProjectByName(String name) {
-		return projectRepository.findByName(name);
-	}
 
-	@Override
-	public void saveAppRole(AppRole appRole) {
-		appRoleRepository.save(appRole);
-	}
-
-	@Override
-	public void saveAppUser(AppUser appUser) {
-		appUserRepository.save(appUser);
-	}
-
-	@Override
-	public AppRole findRoleByName(String appRoleName) {
-		return appRoleRepository.findByName(appRoleName);
-	}
 
 }
